@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DESApp.MainWindow"
+        Width="400" Height="400" Title="Encryption System">
+    <StackPanel Margin="10">
+        <TextBlock Text="Enter Text to Encrypt:"/>
+        <TextBox Name="InputTextBox"/>
+
+        <TextBlock Text="Choose Algorithm:"/>
+        <ComboBox Name="AlgorithmComboBox">
+            <ComboBoxItem Content="DES"/>
+            <ComboBoxItem Content="TripleDES"/>
+            <ComboBoxItem Content="AES"/>
+        </ComboBox>
+
+        <TextBlock Text="Choose Encryption Mode:"/>
+        <ComboBox Name="ModeComboBox">
+            <ComboBoxItem Content="CBC"/>
+            <ComboBoxItem Content="ECB"/>
+        </ComboBox>
+
+        <Button Name="EncryptButton" Content="Encrypt" Margin="5" Click="EncryptButton_Click"/>
+        <Button Name="DecryptButton" Content="Decrypt" Margin="5" Click="DecryptButton_Click"/>
+
+        <TextBlock Text="Result:"/>
+        <TextBox Name="ResultTextBox" IsReadOnly="True"/>
+    </StackPanel>
+</Window>
